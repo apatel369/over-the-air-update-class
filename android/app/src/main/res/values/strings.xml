@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OTAClass</string>
+    <string name="reactNativeCodePush_androidDeploymentKey" moduleConfig="true" translatable="false">GedY7WAQxMC4j5xV2DPuRFDaNCScOAOesYyXx</string>
 </resources>
