@@ -36,9 +36,10 @@
 				<true/>
 			</dict>
 			<key>codepush.blob.core.windows.net</key>
-			<dict/>
-			<key>NSExceptionAllowsInsecureHTTPLoads</key>
-			<true/>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>codepush.appcenter.ms</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -65,6 +66,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>CodePushDeploymentKey</key>
 	<string>EiDlCE-qAf064PpRtrm71580BbY253gA5v8_7</string>
 </dict>
