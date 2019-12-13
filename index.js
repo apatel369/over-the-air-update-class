@@ -16,10 +16,12 @@ const codePushKeys = Platform.select({
   },
 });
 
-const isBetaUser = false;
+const isBetaUser = true;
 
 const CodePushifiedApp = codePush({
   deploymentKey: isBetaUser ? codePushKeys.STAGING : codePushKeys.PRODUCTION,
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+  installMode: codePush.InstallMode.ON_NEXT_RESUME,
 })(App);
 
 AppRegistry.registerComponent(appName, () => CodePushifiedApp);
