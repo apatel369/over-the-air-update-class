@@ -36,7 +36,7 @@ export default ({navigation}) => (
         })
       }
     />
-    {/* <RowItem
+    <RowItem
       name="Computers"
       color="#49475B"
       onPress={() =>
@@ -44,7 +44,8 @@ export default ({navigation}) => (
           title: 'Computers',
           questions: computerQuestions,
           color: '#49475B',
-        })}
-    /> */}
+        })
+      }
+    />
   </ScrollView>
 );
