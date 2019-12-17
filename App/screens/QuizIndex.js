@@ -29,7 +29,7 @@ export default ({navigation}) => (
       }}
     />
 
-    <RowItem
+    {/* <RowItem
       name="Space"
       color="#36b1f0"
       onPress={() =>
@@ -39,7 +39,7 @@ export default ({navigation}) => (
           color: '#36b1f0',
         })
       }
-    />
+    /> */}
     <RowItem
       name="Westerns"
       color="#799496"
