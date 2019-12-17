@@ -3,6 +3,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 
 import QuizIndex from './screens/QuizIndex';
 import Quiz from './screens/Quiz';
+import Updating from './screens/Updating';
 
 const MainStack = createStackNavigator({
   QuizIndex: {
@@ -24,4 +25,15 @@ const MainStack = createStackNavigator({
   },
 });
 
-export default createAppContainer(MainStack);
+const Modals = createStackNavigator(
+  {
+    Main: MainStack,
+    Updating,
+  },
+  {
+    headerMode: 'none',
+    mode: 'modal',
+  },
+);
+
+export default createAppContainer(Modals);
