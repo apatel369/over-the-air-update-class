@@ -18,9 +18,13 @@ const codePushKeys = Platform.select({
 
 const isBetaUser = true;
 
+export const codePushDeploymentKey = isBetaUser
+  ? codePushKeys.STAGING
+  : codePushKeys.PRODUCTION;
+
 const CodePushifiedApp = codePush({
-  deploymentKey: isBetaUser ? codePushKeys.STAGING : codePushKeys.PRODUCTION,
-  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+  deploymentKey: codePushDeploymentKey,
+  checkFrequency: codePush.CheckFrequency.MANUAL,
   installMode: codePush.InstallMode.ON_NEXT_RESUME,
 })(App);
 

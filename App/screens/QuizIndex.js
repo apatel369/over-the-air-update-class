@@ -1,17 +1,30 @@
 import React from 'react';
-import {ScrollView, StatusBar} from 'react-native';
+import {ScrollView, StatusBar, Button} from 'react-native';
 import {NavigationEvents} from 'react-navigation';
+import codePush from 'react-native-code-push';
 
 import spaceQuestions from '../data/space';
 import westernsQuestions from '../data/westerns';
 import computerQuestions from '../data/computers';
 
 import {RowItem} from '../components/RowItem';
+import {codePushDeploymentKey} from '../../index';
 
 export default ({navigation}) => (
   <ScrollView>
     <NavigationEvents
       onWillFocus={() => StatusBar.setBarStyle('dark-content')}
+    />
+
+    <Button
+      title="Check for Updates"
+      onPress={() => {
+        codePush.sync({
+          deploymentKey: codePushDeploymentKey,
+          installMode: codePush.InstallMode.IMMEDIATE,
+          updateDialog: true,
+        });
+      }}
     />
 
     <RowItem
@@ -25,7 +38,7 @@ export default ({navigation}) => (
         })
       }
     />
-    {/* <RowItem
+    <RowItem
       name="Westerns"
       color="#799496"
       onPress={() =>
@@ -35,7 +48,7 @@ export default ({navigation}) => (
           color: '#799496',
         })
       }
-    /> */}
+    />
     {/* <RowItem
       name="Computers"
       color="#49475B"
